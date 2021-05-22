@@ -27,10 +27,14 @@ export default {
     };
   },
   async asyncData({ $strapi, params }) {
-    const recipes = await $strapi.$recipes.find({ uid: params.uid });
-    return {
-      recipes
-    };
+    try {
+      const recipes = await $strapi.$recipes.find({ uid: params.uid });
+      return {
+        recipes
+      };
+    } catch {
+      console.log("not found");
+    }
   }
 };
 </script>

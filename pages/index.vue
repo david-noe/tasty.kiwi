@@ -47,10 +47,14 @@ export default {
     };
   },
   async asyncData({ $strapi }) {
-    const recipes = await $strapi.$recipes.find();
-    return {
-      recipes
-    };
+    try {
+      const recipes = await $strapi.$recipes.find();
+      return {
+        recipes
+      };
+    } catch {
+      console.log("not found");
+    }
   }
 };
 </script>
