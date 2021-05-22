@@ -51,7 +51,7 @@ export default {
   },
 
   strapi: {
-    entities: ["rezepts"]
+    entities: ["recipes"]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

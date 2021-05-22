@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-secondary shadow-md inline-flex w-full fixed">
+  <header class="bg-secondary shadow-md inline-flex w-full fixed inset-0 h-20">
     <div
       class="p-4 md:p-6 max-w-6xl container mx-auto flex justify-between items-center"
     >

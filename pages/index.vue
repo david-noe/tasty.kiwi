@@ -46,9 +46,11 @@ export default {
       ]
     };
   },
-  async mounted() {
-    this.recipes = await this.$strapi.$rezepts.find();
-    console.log(this.recipes);
+  async asyncData({ $strapi }) {
+    const recipes = await $strapi.$recipes.find();
+    return {
+      recipes
+    };
   }
 };
 </script>
