@@ -6,7 +6,8 @@
       <div class="flex flex-col h-full justify-between">
         <div>
           <img
-            :src="img.url"
+            v-if="img"
+            :src="`${$config.apiURL}${img.url}`"
             :alt="img.alt"
             class="h-[12rem] object-cover w-full"
           />
@@ -23,10 +24,10 @@
             </h4>
           </div>
           <div class="flex">
-            <BrandKiwi v-for="n in score" :key="n" class="h-6 ml-1" />
+            <BrandKiwi v-for="n in score" :key="n.x" class="h-6 ml-1" />
             <BrandKiwi
               v-for="n in 5 - score"
-              :key="n"
+              :key="n.x"
               class="h-6 ml-1 filter grayscale opacity-40"
             />
           </div>

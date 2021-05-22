@@ -20,6 +20,12 @@ export default {
     ]
   },
 
+  // Env
+
+  publicRuntimeConfig: {
+    apiURL: process.env.API_URL || "http://localhost:1337"
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -42,6 +48,10 @@ export default {
 
   tailwindcss: {
     jit: true
+  },
+
+  strapi: {
+    entities: ["rezepts"]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

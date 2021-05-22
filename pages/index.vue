@@ -8,9 +8,9 @@
           :key="index"
           :title="item.title"
           :excerpt="item.excerpt"
-          :img="item.image"
           :score="item.score"
           :uid="item.uid"
+          :img="item.image[0]"
         />
       </div>
     </LayoutTastyBox>
@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       recipes: [
-        {
+        /*       {
           title: "Schweröl Mandelpesto",
           uid: "schweroel-mandelpesto",
           excerpt: "Grossartig cremige Mandelpesto fürs Studentenbudget.",
@@ -42,9 +42,13 @@ export default {
             url: "/img/sugar-1.jpeg"
           },
           score: 2
-        }
+        } */
       ]
     };
+  },
+  async mounted() {
+    this.recipes = await this.$strapi.$rezepts.find();
+    console.log(this.recipes);
   }
 };
 </script>
