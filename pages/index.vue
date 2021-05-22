@@ -53,7 +53,7 @@ export default {
         recipes
       };
     } catch {
-      console.log("not found");
+      console.log("not found index");
     }
   }
 };

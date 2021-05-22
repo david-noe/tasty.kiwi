@@ -3,17 +3,14 @@
     <div>
       <LayoutHeroImage :img="recipes[0].image[0]" />
       <LayoutTastyBox :title="recipes[0].title" :tagline="recipes[0].excerpt">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        <div class="flex justify-between">
+          <div
+            class="max-w-xl font-light text-xl"
+            v-html="recipes[0].content"
+          ></div>
+          <LayoutIngredientBox :ingredients="recipes[0].ingredients" />
+        </div>
       </LayoutTastyBox>
-      <!-- <LayoutCard
-        v-for="(item, index) in recipes"
-        :key="index"
-        :title="item.title"
-        :excerpt="item.excerpt"
-        :score="item.score"
-        :uid="item.uid"
-        :img="item.image[0]"
-      /> -->
     </div>
   </div>
 </template>

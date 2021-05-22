@@ -9,6 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/strapi": "^0.3.1",
     "@nuxtjs/vercel-builder": "^0.21.2",
     "core-js": "^3.9.1",
