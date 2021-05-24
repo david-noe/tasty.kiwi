@@ -11,6 +11,7 @@
       title="rezept einreichen"
       tagline="Sende uns dein Lieblingsrezept"
     >
+      <FunctionalitySubmitform />
     </LayoutTastyBox>
   </div>
 </template>
