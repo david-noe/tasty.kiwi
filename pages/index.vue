@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-secondary min-h-screen">
+  <div class="bg-secondary min-h-screen pt-20">
     <BrandPattern class="max-h-[37vh] overflow-hidden" />
     <LayoutTastyBox title="kochkünste" tagline="unsere lieblingsrezepte">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
